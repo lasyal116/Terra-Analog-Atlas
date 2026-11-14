@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "terra-analog-atlas"
+version = "1.0.0"
+description = "Scale-aware, explainable planetary terrain analog retrieval"
+requires-python = ">=3.11"
+dynamic = ["dependencies"]
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+[tool.setuptools.packages.find]
+include = ["analog_atlas*"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
